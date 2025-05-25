@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to top right, #5d2da9, #9c4edd);
+  min-height: 100vh;
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+}
+
+.decoracao {
+  padding: 4rem 2rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%; 
+  max-width: 1280px; 
+}
+
+.decor {
+  position: absolute;
+  opacity: 0.2;
+}
+
+.diamond {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #ffffff;
+  transform: rotate(45deg);
+  border-radius: 0.2rem;
+}
+
+.d1 { top: 3rem; right: 5rem; }
+.d2 { top: 8rem; right: 10rem; }
+.d3 { bottom: 6rem; left: 4rem; }
+
+.cross {
+  font-size: 3rem;
+  bottom: 1rem;
+  left: 2rem;
+}
+
+/* Cabeçalho */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.header img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+/* Container principal com flex */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    align-items: center; 
+    gap: 5rem; 
+  }
+}
+/* Mockups */
+.screens {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mockup {
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.desktop {
+  width: 600px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  z-index: 1;
+}
+
+.mobile {
+  width: 180px;
+  height: 360px;
+  position: absolute;
+  bottom: -3rem;
+  right: -3rem;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  z-index: 2;
+}
+
+.mockup-header {
+  background-color: #001f29;
+  height: 1.8rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.6rem;
+}
+
+.desktop .mockup-header {
+    height: 2rem;
+    padding: 0 1rem;
+}
+
+.search-box {
+  background-color: #eef1f5;
+  border-radius: 2px;
+  opacity: 0.7;
+}
+
+.desktop .search-box {
+  width: 100px;
+  height: 12px;
+}
+
+.mobile .search-box {
+  width: 50px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5px;
+  cursor: pointer;
+}
+
+.desktop .menu-icon { gap: 3px; }
+
+.menu-icon span {
+  display: block;
+  background-color: #ffffff;
+  border-radius: 1px;
+}
+
+.desktop .menu-icon span {
+  width: 18px;
+  height: 2px;
+}
+
+.mobile .menu-icon span {
+    width: 14px;
+    height: 1.5px;
+}
+
+.mockup-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.desktop .mockup-body {
+    padding: 1rem;
+    justify-content: space-around;
+}
+
+.mobile .mockup-body {
+  justify-content: flex-start; 
+  gap: 1.3rem; 
+  padding: 0.8rem 0.6rem; 
+}
+
+.row {
+  display: flex;
+}
+
+.desktop .row {
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.row.small {
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+.avatar {
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.desktop .avatar {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 4px;
+}
+
+.row.small .avatar {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-top: 1px;
+}
+
+.avatar1 {
+  background: linear-gradient(135deg, #ff9a76, #ffb199);
+}
+.avatar2 {
+  background: linear-gradient(135deg, #00aaff, #0099ff);
+}
+.avatar3 {
+  background: linear-gradient(135deg, #b94aff, #d94aff);
+}
+
+/* Linhas Geral */
+.desktop-lines, .mobile-lines {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.desktop-lines { gap: 5px; }
+.mobile-lines { gap: 2px; }
+
+/* Linha pequena no topo */
+.line-small-top {
+  background-color: #e2e8f0;
+  border-radius: 3px;
+}
+.desktop .line-small-top {
+  height: 10px;
+  width: 15%;
+  margin-bottom: 6px;
+}
+.mobile .line-small-top {
+  height: 4px;
+  width: 35%;
+  margin-bottom: 3px;
+}
+
+/* Linhas grandes abaixo */
+.line-large {
+  background-color: #e2e8f0;
+  border-radius: 3px;
+}
+.desktop .line-large {
+  height: 6px;
+}
+.mobile .line-large {
+  height: 2px;
+}
+
+/* Larguras escalonadas */
+.line-large-1 { width: 75%; }
+.line-large-2 { width: 65%; }
+.line-large-3 { width: 50%; }
+
+/* Pontos no Desktop */
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.dots div {
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: #94a3b8;
+  border-radius: 50%;
+}
+
+/* Texto */
+.text {
+  max-width: 500px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .text {
+    text-align: left;
+  }
+}
+
+.text h2 {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.text p {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Botão */
+.btn {
+  display: inline-block;
+  background-color: white;
+  color: #6f4bbd;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 999px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+}
+
+/* Redes sociais */
+.social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 4rem; 
+  align-self: flex-end; 
+  padding-right: 3rem;
+}
+
+.social a {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.social a:hover {
+  background-color: white;
+  color: #6f4bbd;
+}
+
